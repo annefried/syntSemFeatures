@@ -111,7 +111,6 @@ public class FeatureExtractionPipeline {
 		options.addOption("countability", true, "Path to file with countability information (optional).");
 		options.addOption("csvOutput", true, "Path to folder for CSV output (standoff format, optional).");
 		HelpFormatter formatter = new HelpFormatter();
-		formatter.printHelp("SitEnt SyntSem FeatureExtraction", options);
 
 		// Parse command line and configure
 		CommandLineParser parser = new DefaultParser();
