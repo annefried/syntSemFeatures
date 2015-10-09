@@ -1,10 +1,10 @@
 #######################################
-# SitEnt Syntactic-Semantic Features  #
+SitEnt Syntactic-Semantic Features
 #######################################
 
 
 #############################################
-# 1. LICENSE								#
+1. LICENSE
 #############################################
 
 Copyright 2015 Annemarie Friedrich
@@ -24,7 +24,7 @@ Specifically, the runnable JAR contains packages licensed under the GNU General 
 
 
 #############################################
-# 2. CITATION								#
+2. CITATION
 #############################################
 
 If you use this software, please cite:
@@ -40,11 +40,11 @@ Sharid Loaiciga, Thomas Meyer, and Andrei Popescu-Belis. English-French Verb Phr
 
 
 #############################################
-# 3. HOWTO									#
+3. HOWTO
 ############################################# 
 
 -----------------------------------------
-- 3.1 Additional required resources.	-
+3.1 Additional required resources.
 -----------------------------------------
 
 This software makes us of several resources that are either publically available (e.g. WordNet) or that need to be obtained from LDC.
@@ -59,7 +59,7 @@ You also need a copy of WordNet 3.0. It is sufficient to download the 'database 
 
 
 -----------------------------------------
-- 3.2 Using this code.					-
+3.2 Using this code.
 -----------------------------------------
 
 The github code is a Maven eclipse project. For easy use, a Runnable jar file has been compiled and can be downloaded separately. You can run the code as follows:
@@ -101,7 +101,7 @@ If you want to extract features for clauses, you need to give your own ClauseAnn
 
 
 #############################################
-# 4. Feature set							#
+4. Feature set
 #############################################
 
 In this section, we describe the set of features that you can extract using this toolkit.
