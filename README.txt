@@ -21,6 +21,19 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
+IMPORTANT NOTE:
+All components in this package are licensed under the Apache Software License (ASL)
+version 2 - but their dependencies may not be:
+
+IMPORTANT LICENSE NOTE - It must be pointed out that while the component’s source code
+itself is licensed under the ASL, individual components might make use of third-party
+libraries or products that are not licensed under the ASL, such as LGPL libraries or
+libraries which are free for research but may not be used in commercial scenarios.
+Please be aware of the third party licenses and respect them.
+
+Specifically, the runnable JAR contains packages licensed under the GNU General
+Public License version 3.
+
 
 #############################################
 # 2. CITATION								#
