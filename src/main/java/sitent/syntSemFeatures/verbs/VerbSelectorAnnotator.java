@@ -43,8 +43,10 @@ public class VerbSelectorAnnotator extends JCasAnnotator_ImplBase {
 		Collection<VP> verbPhrases = JCasUtil.select(jCas, VP.class);
 		for (VP vp : verbPhrases) {
 			Token head = GrammarUtils.getHeadVerb(vp, jCas, true);
-			// System.out.println(vp.getCoveredText() + " \t\t" +
-			// head.getCoveredText());
+			if (head == null) {
+				// skip cases where head could not be identified
+				continue;
+			}
 			if (JCasUtil.selectCovered(ClassificationAnnotation.class, head).isEmpty()) {
 				ClassificationAnnotation classAnnot = new ClassificationAnnotation(jCas, head.getBegin(),
 						head.getEnd());
