@@ -60,6 +60,12 @@ public class GrammarUtils {
 		
 		// find covered tokens and dependencies
 		List<Token> tokens = JCasUtil.selectCovered(Token.class, annotation);
+		
+		// only one token, this should be the head
+		if (tokens.size() == 1) {
+			return tokens.get(0);
+		}
+		
 		if (tokens.size() == 0) {
 			// in some rare cases, the named entity mention does not span an
 			// entire Token,
@@ -147,6 +153,11 @@ public class GrammarUtils {
 	public static Token getHeadVerb(Annotation annotation, JCas jcas, boolean useCopula) {
 		// find covered tokens and dependencies
 		List<Token> tokens = JCasUtil.selectCovered(Token.class, annotation);
+		
+		if (tokens.size() == 1) {
+			// only one token, this should be the head.
+			return tokens.get(0);
+		}
 
 		List<Dependency> deps = JCasUtil.selectCovered(Dependency.class, annotation);
 		Set<Token> tokenSet = new HashSet<Token>(tokens);
