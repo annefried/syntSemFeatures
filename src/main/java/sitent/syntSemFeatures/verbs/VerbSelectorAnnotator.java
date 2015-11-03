@@ -14,10 +14,9 @@ import org.apache.uima.UimaContext;
 /**
  * @author afried (Annemarie Friedrich)
  * 
- * This annotator marks selected noun phrases with ClassificationAnnotation annotations.
- * Feature extraction is then done for those (instead of all NPs, for efficiency reasons).
+ * This annotator marks selected verb phrases with ClassificationAnnotation annotations.
+ * Feature extraction is then done for those.
  * 
- * NamedEntityMention: this is for example marked in ACE.
  * 
  */
 
