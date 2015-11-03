@@ -96,6 +96,10 @@ public class NounPhraseFeaturesAnnotator extends JCasAnnotator_ImplBase {
 
 			// identify the syntactic head of the NP
 			Token head = GrammarUtils.getHeadNoun(nounPhrase, jCas);
+			if (head == null) {
+				// skip if no head could be identified
+				continue;
+			}
 			// extract features for this head (no feature prefix, simple np features.
 			setNounPhraseFeaturesForToken(head, jCas, nounPhrase, childNodeMap, "");
 			WordNetUtils.setWordNetFeatures(head, nounPhrase, jCas, "", wordnet);
