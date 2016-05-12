@@ -115,7 +115,7 @@ In this section, we describe the set of features that you can extract using this
  - determinerType:    def, indef, none
  - mentionLemma:      the head's lemma
  - mentionPOS:        the head's part-of-speech tag
- - nounType:          propoer, common, pronoun, unknown
+ - nounType:          proper, common, pronoun, unknown
  - number:            sg/pl
  - person:            1/2/3
  - sense0-3:          synset ID of the lemma's sense in WordNet (most frequent sense, no WSD), and synset IDs of direct hypernym, hypernym of hypernym etc.
