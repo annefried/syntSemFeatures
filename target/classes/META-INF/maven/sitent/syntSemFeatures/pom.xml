@@ -3,6 +3,7 @@
   <groupId>sitent</groupId>
   <artifactId>syntSemFeatures</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
   <name>SitEnt NLP Features</name>
   <description>A collection of syntactic-semantic features (for verbs and noun phrases) implemented for UIMA.</description>
   <dependencies>
@@ -81,4 +82,52 @@
   		<version>0.6.6</version>
   	</dependency>
   </dependencies>
+  <build>
+		<plugins>
+<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                   <source>1.8</source>
+                   <target>1.8</target>
+                </configuration>
+        </plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<id>syntSemFeatureExtractor</id>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<transformers>
+								<!-- Set the main class of the executable JAR -->
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+									<mainClass>sitent.syntSemFeatures.examples.FeatureExtractionPipeline</mainClass>
+								</transformer>
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+									<resource>
+										META-INF/org.apache.uima.fit/types.txt
+									</resource>
+								</transformer>
+							</transformers>
+							<outputFile>
+								${project.build.directory}/sitentSyntSemFeatureExtractionv1.1.jar
+							</outputFile>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+</build>
+  
+  
 </project>

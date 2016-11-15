@@ -24,7 +24,6 @@ import org.cleartk.ne.type.NamedEntityMention;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NP;
-import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRP;
 import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency;
 import sitent.syntSemFeatures.util.GrammarUtils;
 import sitent.types.ClassificationAnnotation;
