@@ -64,14 +64,14 @@ You also need a copy of WordNet 3.0. It is sufficient to download the 'database 
 
 The github code is a Maven eclipse project. For easy use, a Runnable jar file has been compiled and can be downloaded separately. You can run the code as follows:
 
-java -jar sitentSyntSemFeatureExtractionv1.0.jar -input resources/examples/input -countability resources/countability/webcelex_countabilityNouns.txt -wordnet my-resources/wordnet3.0 -csvOutput csv-output
+java -jar sitentSyntSemFeatureExtractionv1.1.jar -input resources/examples/input -countability resources/countability/webcelex_countabilityNouns.txt -wordnet my-resources/wordnet3.0 -csvOutput csv-output
 
 This will create the CSV output (described below) in the folder csv-output. Be a little patient while running this -- it needs to parse your data.
 
 The feature extraction requires preprocessing using the Stanford Parser (collapsed and propagated dependencies). Examples can be found in the package sitent.syntSemFeatures.examples.
 
 Take a look at FeatureExtractionPipeline.java. You can execute the feature extraction pipeline as follows:
-java -jar sitent.syntSemFeatures.FeatureExtractionPipeline <parameters>
+java -jar sitent.syntSemFeatures.FeatureExtractionPipeline.jar <parameters>
 
 The parameters are:
  -countability <arg>   Path to file with countability information
